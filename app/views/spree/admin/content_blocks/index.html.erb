@@ -1,3 +1,17 @@
 <h1><%= Spree.t('content_blocks.index_title') %></h1>
-
-<%= render :partial => 'content_block', :collection => @content_blocks, :as => 'block' %>
+<br>
+<table class="index" id="listing_content_blocks">
+  <colgroup>
+    <col style="width: 70%;">
+    <col style="width: 30%;">
+  </colgroup>
+  <thead>
+  <tr data-hook="admin_content_blocks_index_headers">
+    <th>Title</th>
+    <th>Last Update</th>
+  </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'content_block', :collection => @content_blocks, :as => 'block' %>
+  </tbody>
+</table>
