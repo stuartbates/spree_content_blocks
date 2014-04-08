@@ -1,0 +1,23 @@
+<div data-hook="admin_product_form_fields">
+
+  <div class="left eight columns alpha" data-hook="admin_product_form_left">
+
+    <%= form_for [:admin, @content_block] do |f| %>
+
+      <%= f.field_container :title do %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      <% end %>
+
+      <%= f.field_container :body do %>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+      <% end %>
+
+      <%= f.submit Spree.t('content_blocks.save') %>
+
+    <% end %>
+
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+<%= cache "content_block_#{token}" do %>
+
+  <% block = Spree::ContentBlock.find_or_create_by_token(token) %>
+
+  <h3><%= block.title %></h3>
+
+  <p><%= block.body.html_safe %></p>
+
+  <%= edit_content_block_link(block) %>
+
+<% end %>
