@@ -1,4 +1,4 @@
 <tr class="<%= cycle('odd', 'even') %>">
-  <td><%= link_to block.title, spree.edit_admin_content_block_path(block) %></td>
+  <td><%= link_to block.safe_title, spree.edit_admin_content_block_path(block) %></td>
   <td class="align-center"><%= block.updated_at %></td>
 </tr>

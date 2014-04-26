@@ -10,12 +10,12 @@ module SpreeContentBlocks
       Dir.glob Engine.root.join("app/helpers/*.rb") do |c|
         Rails.env.production? ? require(c) : load(c)
       end
+      Dir.glob Engine.root.join("app/sweepers/*.rb") do |c|
+        Rails.env.production? ? require(c) : load(c)
+      end
     end
 
     config.to_prepare &method(:activate).to_proc
 
   end
 end
-
-#<h2 class="h3"></h2>
-#<p></p>

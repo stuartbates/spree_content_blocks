@@ -5,6 +5,8 @@ module Spree
       before_filter :find_block, :only => [:show]
       before_filter :find_blocks, :only => [:edit, :update]
 
+      cache_sweeper :content_block_sweeper, :only => [:update]
+
       def index
 
       end

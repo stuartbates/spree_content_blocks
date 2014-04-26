@@ -4,4 +4,5 @@
 en:
   spree:
     content_blocks:
+      index_title: Snippets
       save: Save
