@@ -2,8 +2,8 @@ module Spree
   module Admin
     class ContentBlocksController < ResourceController
 
-      before_filter :find_block, :only => [:show]
-      before_filter :find_blocks, :only => [:edit, :update]
+      before_filter :find_block, :except => [:index]
+      before_filter :find_blocks, :only => [:index]
 
       cache_sweeper :content_block_sweeper, :only => [:update]
 
